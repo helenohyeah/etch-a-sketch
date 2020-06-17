@@ -1,0 +1,113 @@
+:root {
+    --grid-cols: 16;
+    --grid-rows: 16;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    position: relative;
+}
+
+header {
+    height: 5rem;
+    width: 100%;
+    background: #3d5a80;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    padding-bottom: 1.5rem;
+    height: calc(100vh - 6.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+footer {
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+#header-left {
+    width: 50vw;
+    margin-left: 15%;
+    line-height: 1.2;
+}
+
+#header-left a,
+#header-left a:visited {
+    font-size: 1.8rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+#header-left p {
+    font-size: 1.3rem;
+    font-family: 'Manrope', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#header-right {
+    width: 50vw;
+    margin-right: 15%;
+}
+
+#reset {
+    border: none;
+    background-color: #ee6c4d;
+    border: 2px solid #fff;
+    text-align: center;
+    color: #fff;
+    padding: 0.7rem 1.25rem;
+    float: right;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.2s ease 0s;
+    font-size: 1em;
+    text-transform: uppercase;
+    outline: none;
+}
+
+#reset:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+#container {
+    height: 800px;
+    width: 800px;
+    border: 4px double #000;
+    margin: auto auto;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-rows), calc(100% / var(--grid-rows)));
+    grid-template-rows: repeat(var(--grid-cols), calc(100% / var(--grid-rows)));
+    height: 100%;
+}
+
+.box {
+    border: 1px dashed rgba(0, 0, 0, 0.25);
+    width: auto;
+    height: auto;
+}
+
+.box-fill {
+    background-color: #000;
+}
