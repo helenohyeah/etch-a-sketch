@@ -9,7 +9,7 @@ function checkCanvas() {
     let box = document.getElementsByClassName('box');
     for (let i = 0; i < box.length; i++) {
         box[i].addEventListener('mouseover', fillBox);
-        //box[i].style.backgroundColor = generateRandomColor();
+        box[i].addEventListener('click', fillBox);
     }
 }
 
