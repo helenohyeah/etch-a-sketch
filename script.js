@@ -40,6 +40,9 @@ function generateGrid(gridSide) {
 function resetCanvas() {
     removeGrid();
     let gridSide = prompt("How many square per side do you want in your new grid","");
+    if (gridSide == false) {
+        gridSide = 16;
+    }
     generateGrid(gridSide);
     document.documentElement.style.setProperty('--grid-rows', gridSide);
     document.documentElement.style.setProperty('--grid-cols', gridSide);
